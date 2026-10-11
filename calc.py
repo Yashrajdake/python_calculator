@@ -2,24 +2,32 @@
 
 print(  "---Simple Python Calculator---")
 
-num1 = float(input("Enter first number: "))
-operation = input("Enter operator( +, -, *, / ): ")
-num2 = float(input("Enter second number: "))
+while True:
+    # Ask if they want to  continue or quit
+    choice = input("press Enter to calculate, or type 'q' to quit: ")
+    if choice == 'q':
+       print("Goodbye!")
+       break
 
-if operation == "+":
-    result = num1 + num2
-    print("Result:", result)
-elif operation == "-":
-    result = num1 - num2
-    print("Result:", result)
-elif operation == "*" :
-    result = num1 * num2
-    print("Result:", result)
-elif operation == "/" :
-    if num2 != 0:
-        result = num1 / num2
+    num1 = float(input("Enter first number: "))
+    operation = input("Enter operator( +, -, *, / ): ")
+    num2 = float(input("Enter second number: "))
+
+    if operation == "+":
+        result = num1 + num2
         print("Result:", result)
+    elif operation == "-":
+        result = num1 - num2
+        print("Result:", result)
+    elif operation == "*" :
+        result = num1 * num2
+        print("Result:", result)
+    elif operation == "/" :
+        if num2 != 0:
+            result = num1 / num2
+            print("Result:", result)
+        else:
+            print("Error:Cannot divide by zero!")
     else:
-        print("Error:Cannot divide by zero!")
-else:
-    print("Invalid operator!")
+        print("Invalid operator!")
+    print("-" * 25)
