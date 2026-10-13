@@ -1,6 +1,7 @@
 import math
 
 print("--- Advanced Math Utility Tool ---")
+ptint("***")
 
 last_result = None
 
